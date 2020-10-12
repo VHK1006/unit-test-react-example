@@ -1,9 +1,6 @@
+import { mount } from 'enzyme';
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
 import Note from './note';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('Note', () => {
   const props = {

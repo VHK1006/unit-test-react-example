@@ -1,5 +1,5 @@
+import { Button, Form, Input } from 'antd';
 import React, { useState } from 'react';
-import { Form, Button, Input } from 'antd';
 import Note from './note';
 
 const Notes = () => {
@@ -16,13 +16,16 @@ const Notes = () => {
   return (
     <div>
       <h2>Note to Self</h2>
-      <Form className="note-form">
+      <Form
+        className="note-form"
+      >
         <Form.Item onChange={event => setText(event.target.value)}>
           <Input value={text} />
         </Form.Item>
         <Button
           className="submit-btn"
           onClick={handleSubmit}
+          type="primary"
         >
           Submit
         </Button>
@@ -34,13 +37,13 @@ const Notes = () => {
           )
         }))
       }
-      <hr />
       <Button
         className="clear-btn"
         onClick={handleClearNotes}
       >
         Clear Notes
       </Button>
+      <hr />
     </div>
   )
 };

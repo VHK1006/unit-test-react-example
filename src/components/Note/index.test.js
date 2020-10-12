@@ -1,9 +1,6 @@
+import { shallow } from 'enzyme';
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
 import Notes from './index';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('Notes', () => {
   let notes = shallow(<Notes />);
